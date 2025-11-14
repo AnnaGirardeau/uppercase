@@ -1,0 +1,23 @@
+name: Hal9
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  devel:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.11'
+    - name: Install Hal9
+      run: pip install hal9
+    - uses: actions/checkout@v1
+    - name: uppercase api
+      env:
+        HAL9_TOKEN: ${{ secrets.HAL9_TOKEN }}
+      run: |
+        hal9 deploy app.py . --name uppercase --access unlisted --title UpperCase --description "Outputs input with all uppercase letters.";
