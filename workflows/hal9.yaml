@@ -13,10 +13,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: '3.11'
-    - name: Install Hal9
+    - name: Return uppercase
       run: pip install hal9
     - uses: actions/checkout@v1
-    - name: uppercase api
+    - name: uppercase
       env:
         HAL9_TOKEN: ${{ secrets.HAL9_TOKEN }}
       run: |
