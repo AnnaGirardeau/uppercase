@@ -20,4 +20,4 @@ jobs:
       env:
         HAL9_TOKEN: ${{ secrets.HAL9_TOKEN }}
       run: |
-        hal9 deploy app.py . --name uppercase --access unlisted --title UpperCase --description "Outputs input with all uppercase letters.";
+        hal9 deploy app.py . --name uppercase --access unlisted --title upperCase --description "Outputs input with all uppercase letters.";
