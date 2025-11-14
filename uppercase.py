@@ -1,7 +1,7 @@
 import requests
 
-url = "https://hal9.com/annarg/graph-relationship/plot"
-# url = "http://localhost:8000/plot"
+url = "https://hal9.com/annarg/uppercase/"
+# url = "http://localhost:8000/"
 API_KEY = "H9PGRCGFSYMYVYMOQSAQHWHDNQHVOIKYPG"
 
 input_data = { "text": "hello" }
